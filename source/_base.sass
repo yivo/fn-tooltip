@@ -1,0 +1,40 @@
+.fn-tooltip
+  position: relative
+  &:after
+    position: absolute
+    display: none
+    padding: 5px 8px
+    font-style: normal
+    font-variant: normal
+    font-weight: normal
+    font-stretch: normal
+    font-size: $fn-tooltip-text-size
+    line-height: 1.5
+    color: $fn-tooltip-text-color
+    text-align: center
+    text-decoration: none
+    text-shadow: none
+    text-transform: none
+    letter-spacing: normal
+    word-wrap: break-word
+    white-space: pre
+    pointer-events: none
+    content: attr(data-tooltip)
+    background: $fn-tooltip-background
+    +border-radius($fn-tooltip-border-radius)
+    +font-smoothing(subpixel-antialiased)
+  &:before
+    position: absolute
+    display: none
+    width: 0
+    height: 0
+    color: $fn-tooltip-background
+    pointer-events: none
+    content: ''
+    border: $fn-tooltip-arrow-size solid transparent
+  &:before, &:after
+    z-index: $fn-tooltip-z-index
+  &:hover, &:active, &:focus
+    &:before, &:after
+      +inline-block
+      text-decoration: none
