@@ -1,0 +1,61 @@
+=fn-tooltip-style($style, $background, $text-color, $text-size, $arrow-size, $border-radius)
+  .fn-tooltip#{fn-tooltip-style-class-name($style)}
+    &:after
+      font-size:  $text-size
+      color:      $text-color
+      background: $background
+      +border-radius($border-radius)
+    &:before
+      color: $background
+      border: $arrow-size solid transparent
+
+    &.dir-s, &.dir-se, &.dir-sw
+      &:after
+        margin-top: $arrow-size
+      &:before
+        bottom:             -$arrow-size
+        margin-right:       -$arrow-size
+        border-bottom-color: $background
+
+    &.dir-se
+      &:after
+        margin-left: -3 * $arrow-size
+
+    &.dir-sw
+      &:after
+        margin-right: -3 * $arrow-size
+
+    &.dir-n, &.dir-ne, &.dir-nw
+      &:after
+        margin-bottom: $arrow-size
+      &:before
+        top:             -$arrow-size
+        margin-right:    -$arrow-size
+        border-top-color: $background
+
+    &.dir-ne
+      &:after
+        margin-left: -3 * $arrow-size
+
+    &.dir-nw
+      &:after
+        margin-right: -3 * $arrow-size
+
+    &.dir-w
+      &:after
+        margin-right: $arrow-size
+      &:before
+        left:             -$arrow-size
+        margin-top:       -$arrow-size
+        border-left-color: $background
+
+    &.dir-e
+      &:after
+        margin-left: $arrow-size
+      &:before
+        right:             -$arrow-size
+        margin-top:        -$arrow-size
+        border-right-color: $background
+
++fn-tooltip-style(default, $fn-tooltip-background, $fn-tooltip-text-color, $fn-tooltip-text-size, $fn-tooltip-arrow-size, $fn-tooltip-border-radius)
++fn-tooltip-style(danger, $fn-tooltip-danger-background, $fn-tooltip-danger-text-color, $fn-tooltip-danger-text-size, $fn-tooltip-danger-arrow-size, $fn-tooltip-danger-border-radius)

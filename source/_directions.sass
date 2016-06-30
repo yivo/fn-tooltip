@@ -3,64 +3,52 @@
     &:after
       top: 100%
       right: 50%
-      margin-top: $fn-tooltip-arrow-size
     &:before
       top: auto
       right: 50%
-      bottom: -$fn-tooltip-arrow-size
-      margin-right: -$fn-tooltip-arrow-size
-      border-bottom-color: $fn-tooltip-background
+
   &.dir-se
     &:after
       right: auto
       left: 50%
-      margin-left: -3 * $fn-tooltip-arrow-size
+
   &.dir-sw
     &:after
-      margin-right: -3 * $fn-tooltip-arrow-size
+
   &.dir-n, &.dir-ne, &.dir-nw
     &:after
       right: 50%
       bottom: 100%
-      margin-bottom: $fn-tooltip-arrow-size
     &:before
-      top: -$fn-tooltip-arrow-size
       right: 50%
       bottom: auto
-      margin-right: -$fn-tooltip-arrow-size
-      border-top-color: $fn-tooltip-background
+
   &.dir-ne
     &:after
       right: auto
       left: 50%
-      margin-left: -3 * $fn-tooltip-arrow-size
+
   &.dir-nw
     &:after
-      margin-right: -3 * $fn-tooltip-arrow-size
+
   &.dir-s, &.dir-n
     &:after
       +transform(translateX(50%))
+
   &.dir-w
     &:after
       right: 100%
       bottom: 50%
-      margin-right: $fn-tooltip-arrow-size
       +transform(translateY(50%))
     &:before
       top: 50%
       bottom: 50%
-      left: -$fn-tooltip-arrow-size
-      margin-top: -$fn-tooltip-arrow-size
-      border-left-color: $fn-tooltip-background
+
   &.dir-e
     &:after
       bottom: 50%
       left: 100%
-      margin-left: $fn-tooltip-arrow-size
       +transform(translateY(50%))
     &:before
       top: 50%
-      right: -$fn-tooltip-arrow-size
       bottom: 50%
-      margin-top: -$fn-tooltip-arrow-size
-      border-right-color: $fn-tooltip-background

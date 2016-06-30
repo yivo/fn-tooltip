@@ -1,6 +1,22 @@
+$fn-tooltip-z-index:       2147483647         !default;
+
 $fn-tooltip-background:    rgba(0, 0, 0, 0.8) !default;
 $fn-tooltip-text-size:     1rem               !default;
 $fn-tooltip-text-color:    #FFF               !default;
 $fn-tooltip-arrow-size:    0.4rem             !default;
-$fn-tooltip-z-index:       2147483647         !default;
 $fn-tooltip-border-radius: 4px                !default;
+
+$fn-tooltip-danger-background:    rgba(#D14841, 0.9)        !default;
+$fn-tooltip-danger-text-size:     $fn-tooltip-text-size     !default;
+$fn-tooltip-danger-text-color:    #FFF                      !default;
+$fn-tooltip-danger-arrow-size:    $fn-tooltip-arrow-size    !default;
+$fn-tooltip-danger-border-radius: $fn-tooltip-border-radius !default;
+
+@function fn-tooltip-style-class-name($style) {
+  @if $style == default {
+    @return '';
+  } @else {
+    $prefix: '.style-';
+    @return #{$prefix}#{$style};
+  }
+};
